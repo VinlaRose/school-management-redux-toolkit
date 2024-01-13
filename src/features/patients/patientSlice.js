@@ -7,7 +7,7 @@ export const fetchPatients = createAsyncThunk(
   'patients/fetchPatients',
   async () => {
     const response = await axios.get(
-      'https://patient-management-system.vinlarose.repl.co/patients',
+      'https://e56996a0-2ad3-40d6-99e0-0e582db5567b-00-37dehjt0rc2bn.global.replit.dev/patients',
     )
     console.log(response.data)
     return response.data
