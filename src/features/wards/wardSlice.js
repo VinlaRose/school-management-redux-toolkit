@@ -7,7 +7,7 @@ export const fetchWards = createAsyncThunk(
   'wards/fetchWards',
   async () => {
     const response = await axios.get(
-      'https://patient-management-system.vinlarose.repl.co/wards',
+      'https://e56996a0-2ad3-40d6-99e0-0e582db5567b-00-37dehjt0rc2bn.global.replit.dev/wards',
     )
     console.log(response.data)
     return response.data
@@ -19,7 +19,7 @@ export const addWard = createAsyncThunk(
   'wards/addWard',
   async (wardData) => {
     try {
-      const response = await axios.post('https://patient-management-system.vinlarose.repl.co/wards', wardData);
+      const response = await axios.post('https://e56996a0-2ad3-40d6-99e0-0e582db5567b-00-37dehjt0rc2bn.global.replit.dev/wards', wardData);
       return response.data;
     } catch (error) {
       throw error;
@@ -31,7 +31,7 @@ export const deleteWard = createAsyncThunk(
   'wards/deleteWard',
   async (wardId) => {
     try {
-      const response = await axios.delete(`https://patient-management-system.vinlarose.repl.co/wards/${wardId}`);
+      const response = await axios.delete(`https://e56996a0-2ad3-40d6-99e0-0e582db5567b-00-37dehjt0rc2bn.global.replit.dev/wards/${wardId}`);
       return response.data;
     } catch (error) {
       throw error;
@@ -44,7 +44,7 @@ export const updateWard = createAsyncThunk(
   async (wardData) => {
     console.log(wardData)
     try {
-      const response = await axios.post(`https://patient-management-system.vinlarose.repl.co/wards/${wardData.editingWardId}`, wardData);
+      const response = await axios.post(`https://e56996a0-2ad3-40d6-99e0-0e582db5567b-00-37dehjt0rc2bn.global.replit.dev/wards/${wardData.editingWardId}`, wardData);
       console.log(response.data)
       return response.data.data;
     } catch (error) {

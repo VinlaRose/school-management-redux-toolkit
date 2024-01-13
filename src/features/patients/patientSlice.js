@@ -19,7 +19,7 @@ export const addPatient = createAsyncThunk(
   'patients/addPatient',
   async (patientData) => {
     try {
-      const response = await axios.post('https://patient-management-system.vinlarose.repl.co/patients', patientData);
+      const response = await axios.post('https://e56996a0-2ad3-40d6-99e0-0e582db5567b-00-37dehjt0rc2bn.global.replit.dev/patients', patientData);
       return response.data;
     } catch (error) {
       throw error;
@@ -31,7 +31,7 @@ export const deletePatient = createAsyncThunk(
   'patients/deleteWard',
   async (patientId) => {
     try {
-      const response = await axios.delete(`https://patient-management-system.vinlarose.repl.co/patients/${patientId}`);
+      const response = await axios.delete(`https://e56996a0-2ad3-40d6-99e0-0e582db5567b-00-37dehjt0rc2bn.global.replit.dev/patients/${patientId}`);
       return response.data;
     } catch (error) {
       throw error;
@@ -44,7 +44,7 @@ export const updatePatient = createAsyncThunk(
   async (patientData) => {
     console.log(patientData)
     try {
-      const response = await axios.post(`https://patient-management-system.vinlarose.repl.co/wards/${patientData.editingWardId}`, patientData);
+      const response = await axios.post(`https://e56996a0-2ad3-40d6-99e0-0e582db5567b-00-37dehjt0rc2bn.global.replit.dev/wards/${patientData.editingWardId}`, patientData);
       console.log(response.data)
       return response.data.data;
     } catch (error) {
