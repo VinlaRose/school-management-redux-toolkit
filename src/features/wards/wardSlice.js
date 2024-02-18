@@ -7,7 +7,7 @@ export const fetchWards = createAsyncThunk(
   'wards/fetchWards',
   async () => {
     const response = await axios.get(
-      'https://patient-management-backend-gamma.vercel.app/wards',
+      'https://patient-management-backend-psi.vercel.app/wards',
     )
     console.log(response.data)
     return response.data
@@ -19,7 +19,7 @@ export const addWard = createAsyncThunk(
   'wards/addWard',
   async (wardData) => {
     try {
-      const response = await axios.post('https://patient-management-backend-gamma.vercel.app/wards', wardData);
+      const response = await axios.post('https://patient-management-backend-psi.vercel.app/wards', wardData);
       return response.data;
     } catch (error) {
       throw error;
@@ -31,7 +31,7 @@ export const deleteWard = createAsyncThunk(
   'wards/deleteWard',
   async (wardId) => {
     try {
-      const response = await axios.delete(`https://patient-management-backend-gamma.vercel.app/wards/${wardId}`);
+      const response = await axios.delete(`https://patient-management-backend-psi.vercel.app/wards/${wardId}`);
       return response.data;
     } catch (error) {
       throw error;
@@ -44,7 +44,7 @@ export const updateWard = createAsyncThunk(
   async (wardData) => {
     console.log(wardData)
     try {
-      const response = await axios.post(`https://patient-management-backend-gamma.vercel.app/wards/${wardData.editingWardId}`, wardData);
+      const response = await axios.post(`https://patient-management-backend-psi.vercel.app/wards/${wardData.editingWardId}`, wardData);
       console.log(response.data)
       return response.data.data;
     } catch (error) {
